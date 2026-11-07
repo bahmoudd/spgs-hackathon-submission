@@ -2,7 +2,7 @@ from dotenv import dotenv_values
 from openai import OpenAI
 
 API_KEY = dotenv_values(".env")["API_KEY"]
-MODEL = "gpt-6-luna"
+MODEL = dotenv_values(".env")["MODEL"]
 
 client = OpenAI(
     api_key = API_KEY
